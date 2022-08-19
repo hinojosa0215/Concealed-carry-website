@@ -3,6 +3,8 @@
     <head>
         <title class="tittle">Concealed Carry Licensing</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width =device-width, initial-scale =1"> 
     </head>
     <body>
     <section id="banner">
@@ -13,12 +15,42 @@
             <div class="banner-btn">
                 <a href="#"><span></span>More Info</a>
                 <a href="#"><span></span>Contact me</a>
-
-
             </div>
-        </div>    
+        </div>   
+       
     </section>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menubtn">
+        <img src="menu.png" id="menu">
+    </div>
 
+    <script>
+        var menubtn= document.getElementById("menubtn")
+        var sidenav= document.getElementById("sidenav")
+        var menu= document.getElementById("menu")
+
+        sidenav.style.right = "-250px"
+        menubtn.onclick= function(){
+            if(sidenav.style.right == "-250px"){
+                sidenav.style.right="0";
+                menu.src="x.png";
+            }
+            else{
+                sidenav.style.right="-250px"; 
+                menu.src="menu.png";
+            }
+        }
+    </script>
 
     </body>
 </html>
